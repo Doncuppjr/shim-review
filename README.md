@@ -100,16 +100,16 @@ N/A
 What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as close as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
 If possible, provide a Dockerfile that rebuilds the shim.
 -------------------------------------------------------------------------------
-ThinStation, you need at least chroot and git support
-sudo git clone --depth 1 https://github.com/Thinstation/thinstation.git
-sudo cd thinstation
-sudo ./setup-chroot -i
-sudo wget https://leidos.com/interactives/Secureboot/Leidos-UEFI-CA.cer -O ts/ports/components/shim/UEFI-CA.cer
-sudo ./setup-chroot -e prt-get update -fr shim -im -if -is |tee shim-build.log
+ThinStation, you need at least chroot and git support  
+sudo git clone --depth 1 https://github.com/Thinstation/thinstation.git  
+sudo cd thinstation  
+sudo ./setup-chroot -i  
+sudo wget https://leidos.com/interactives/Secureboot/Leidos-UEFI-CA.cer -O ts/ports/components/shim/UEFI-CA.cer  
+sudo ./setup-chroot -e prt-get update -fr shim -im -if -is |tee shim-build.log  
 
-gcc, 9.2.0, https://github.com/Thinstation/thinstation/tree/6.2-Stable/ts/ports/core/gcc
-binutils, 2.32, https://github.com/Thinstation/thinstation/tree/6.2-Stable/ts/ports/core/binutils
-gnu-efi, 3.0.11, https://github.com/Thinstation/thinstation/tree/6.2-Stable/ts/ports/opt/gnu-efi
+gcc, 9.2.0, https://github.com/Thinstation/thinstation/tree/6.2-Stable/ts/ports/core/gcc  
+binutils, 2.32, https://github.com/Thinstation/thinstation/tree/6.2-Stable/ts/ports/core/binutils  
+gnu-efi, 3.0.11, https://github.com/Thinstation/thinstation/tree/6.2-Stable/ts/ports/opt/gnu-efi  
 
 -------------------------------------------------------------------------------
 Which files in this repo are the logs for your build?   This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
