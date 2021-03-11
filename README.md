@@ -61,7 +61,7 @@ https://github.com/Thinstation/thinstation/blob/6.2-Stable/ts/ports/components/s
 -------------------------------------------------------------------------------
 What patches are being applied and why:
 -------------------------------------------------------------------------------
-No
+None
 
 -------------------------------------------------------------------------------
 If bootloader, shim loading is, grub2: is CVE-2020-10713 fixed ?
