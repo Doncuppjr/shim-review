@@ -1,6 +1,7 @@
 Make sure you have provided the following information:
 
  - [x] link to your code branch cloned from rhboot/shim-review in the form user/repo@tag
+https://www.github.com/doncuppjr/shim-review@Leidos-shim-x64-20210311
  - [x] completed README.md file with the necessary information
  - [x] shim.efi to be signed
  - [x] public portion of your certificate(s) embedded in shim (the file passed to VENDOR_CERT_FILE)
@@ -17,7 +18,7 @@ Make sure you have provided the following information:
 `TENS Public`
 
 ###### What is the origin and full version number of your shim?
-`https://github.com/rhboot/shim/releases/download/15/shim-15.tar.bz2 15`
+`https://www.github.com/rhboot/shim.git` 15.3
 
 ###### What's the justification that this really does need to be signed for the whole world to be able to boot it:
 `We build a custom kernel and don't want to walk users through key enrollment`
@@ -59,4 +60,4 @@ Make sure you have provided the following information:
 `N/A, New Vendor`
 
 ###### What is the hash of your final SHIM binary?
-`87f1a4c6eaf75860459b14b1b12a7def0d0476e6513d4396a4b444dabe05f2d4`
+`6e3f827d4cfc27bcf9c26136cf09076eb930ea9abb06346b1fcad1cd3c479846`
