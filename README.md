@@ -102,7 +102,7 @@ If possible, provide a Dockerfile that rebuilds the shim.
 -------------------------------------------------------------------------------
 ThinStation, you need at least chroot and git support  
 sudo git clone --depth 1 https://github.com/Thinstation/thinstation.git  
-sudo cd thinstation  
+cd thinstation  
 sudo ./setup-chroot -i  
 sudo wget https://leidos.com/interactives/Secureboot/Leidos-UEFI-CA.cer -O ts/ports/components/shim/UEFI-CA.cer  
 sudo ./setup-chroot -e prt-get update -fr shim -im -if -is |tee shim-build.log  
