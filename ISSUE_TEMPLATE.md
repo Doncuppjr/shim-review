@@ -18,7 +18,7 @@ Make sure you have provided the following information:
 `TENS Public`
 
 ###### What is the origin and full version number of your shim?
-`https://www.github.com/rhboot/shim.git` 15.3
+` https://github.com/rhboot/shim/releases/download/15.3/shim-15.3.tar.bz2` 15.3
 
 ###### What's the justification that this really does need to be signed for the whole world to be able to boot it:
 `We build a custom kernel and don't want to walk users through key enrollment`
