@@ -60,4 +60,4 @@ Make sure you have provided the following information:
 `N/A, New Vendor`
 
 ###### What is the hash of your final SHIM binary?
-`6e3f827d4cfc27bcf9c26136cf09076eb930ea9abb06346b1fcad1cd3c479846`
+`eb1f011e62bf8bdf86ce3c7c8eb1beff74e810c322c97ceeda31b46ca6704c5e`
