@@ -1,6 +1,7 @@
 Make sure you have provided the following information:
 
  - [x] link to your code branch cloned from rhboot/shim-review in the form user/repo@tag
+`https://www.github.com/doncuppjr/shim-review@20210330`
  - [x] completed README.md file with the necessary information
 `https://raw.githubusercontent.com/Doncuppjr/shim-review/master/README.md`
  - [x] shim.efi to be signed
@@ -116,5 +117,5 @@ vmlinuz,1,Leidos,linux,5.4.108,donald.cupp@leidos.com
 `N/A`
 
 ###### What is the SHA256 hash of your final SHIM binary?
-`eb1f011e62bf8bdf86ce3c7c8eb1beff74e810c322c97ceeda31b46ca6704c5e`
+`ba0fe814dc482a4cca9f2c3f70e73efef674456d68d416d371130b30dcb067f8`
 
