@@ -51,7 +51,7 @@ Who is the secondary contact for security updates, etc.
 -------------------------------------------------------------------------------
 What upstream shim tag is this starting from:
 -------------------------------------------------------------------------------
-15.3
+15.4
 
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
@@ -105,6 +105,7 @@ sudo git clone --depth 1 https://github.com/Thinstation/thinstation.git
 cd thinstation  
 sudo ./setup-chroot -i  
 sudo wget https://leidos.com/interactives/Secureboot/Leidos-UEFI-CA.cer -O ts/ports/components/shim/UEFI-CA.cer  
+echo -e "shimx64.efi,1,Leidos,shim,15.4,donald.cupp@leidos.com\n" > ts/ports/components/shim/BOOTX64.csv  
 sudo ./setup-chroot -e prt-get update -fr shim -im -if -is |tee shim-build.log  
 
 gcc, 10.2.0, https://github.com/Thinstation/thinstation/tree/6.2-Stable/ts/ports/core/gcc  
