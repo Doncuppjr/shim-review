@@ -64,7 +64,12 @@ shimx64.efi,1,Leidos,shim,15.4,donald.cupp@leidos.com
 `Grub looks like  
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md  
 grub,1,Free Software Foundation,grub,2.06-rc1,https//www.gnu.org/software/grub/  
-grub.leidos,1,Leidos,grub2,2.06-rc1-1,donald.cupp@leidos.com  
+grub.leidos,1,Leidos,grub,2.06-rc1-1,donald.cupp@leidos.com  
+`
+`Linux looks like  
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md  
+linux,1,The Linux Foundation,linux,5.4.108,https://www.kernel.org/  
+vmlinuz,1,Leidos,linux,5.4.108,donald.cupp@leidos.com  
 `
 
 ##### Were your old SHIM hashes provided to Microsoft ?
