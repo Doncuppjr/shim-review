@@ -30,7 +30,7 @@ TENS Public
 -------------------------------------------------------------------------------
 What's the justification that this really does need to be signed for the whole world to be able to boot it:
 -------------------------------------------------------------------------------
-We build a custom kernel and don't want to walk users through key enrollment
+We produce a 'LiveCD' to be used as a remote access and emergency access terminal, while also being certified by DISA. Wherever applicable, FIPS standards are applied, and all STIG's are implemented. The focus of the distribution is to provide a verifiable known state on BYOE devices that is secure when running and leaves no residue. We necessarily must compile our own kernel to achieve all of these objectives, and would like a signed shim, so we don't need to enroll keys or change the contents of firmware in any way. We provide the image to the public as well as the source code, should anybody want to use our build or make their own, but we don't distribute keys.
 
 -------------------------------------------------------------------------------
 Who is the primary contact for security updates, etc.
@@ -85,7 +85,9 @@ upstream commit 1957a85b0032a81e6482ca4aab883643b8dae06e applied ?
 Is "ACPI: configfs: Disallow loading ACPI tables when locked down"
 upstream commit 75b0cea7bf307f362057cc778efe89af4c615354 applied ?
 -------------------------------------------------------------------------------
-Yes. We prohibit all efivar writes
+Yes. We prohibit all efivar writes and we also set
+CONFIG_SECURITY_LOCKDOWN_LSM=y
+CONFIG_LOCK_DOWN_KERNEL_FORCE_INTEGRITY=y
 
 
 -------------------------------------------------------------------------------
@@ -100,13 +102,13 @@ N/A
 What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as close as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
 If possible, provide a Dockerfile that rebuilds the shim.
 -------------------------------------------------------------------------------
-ThinStation, you need at least chroot and git support  
-sudo git clone --depth 1 https://github.com/Thinstation/thinstation.git  
+ThinStation, you need at least git and chroot, gitea/gitea appears to be enough of a docker image.
+git clone --depth 1 https://github.com/Thinstation/thinstation.git  
 cd thinstation  
-sudo ./setup-chroot -i  
-sudo wget https://leidos.com/interactives/Secureboot/Leidos-UEFI-CA.cer -O ts/ports/components/shim/UEFI-CA.cer  
+./setup-chroot -i  
+wget https://leidos.com/interactives/Secureboot/Leidos-UEFI-CA.cer -O ts/ports/components/shim/UEFI-CA.cer  
 echo -e "shimx64.efi,1,Leidos,shim,15.4,donald.cupp@leidos.com\n" > ts/ports/components/shim/BOOTX64.csv  
-sudo ./setup-chroot -e prt-get update -fr shim -im -if -is |tee shim-build.log  
+./setup-chroot -e prt-get update -fr shim -im -if -is |tee shim-build.log  
 
 gcc, 10.2.0, https://github.com/Thinstation/thinstation/tree/6.2-Stable/ts/ports/core/gcc  
 binutils, 2.32, https://github.com/Thinstation/thinstation/tree/6.2-Stable/ts/ports/core/binutils  

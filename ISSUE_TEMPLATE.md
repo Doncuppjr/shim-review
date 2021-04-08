@@ -1,7 +1,7 @@
 Make sure you have provided the following information:
 
  - [x] link to your code branch cloned from rhboot/shim-review in the form user/repo@tag
-`https://www.github.com/doncuppjr/shim-review@20210330`
+`https://www.github.com/doncuppjr/shim-review@20210408`
  - [x] completed README.md file with the necessary information
 `https://raw.githubusercontent.com/Doncuppjr/shim-review/master/README.md`
  - [x] shim.efi to be signed
@@ -31,10 +31,10 @@ Make sure you have provided the following information:
 `https://github.com/rhboot/shim/releases/download/15.4/shim-15.4.tar.bz2` 15.4
 
 ###### What's the justification that this really does need to be signed for the whole world to be able to boot it:
-`We build a custom kernel and don't want to walk users through key enrollment`
+`We produce a 'LiveCD' to be used as a remote access and emergency access terminal, while also being certified by DISA. Wherever applicable, FIPS standards are applied, and all STIG's are implemented. The focus of the distribution is to provide a verifiable known state on BYOE devices that is secure when running and leaves no residue. We necessarily must compile our own kernel to achieve all of these objectives, and would like a signed shim, so we don't need to enroll keys or change the contents of firmware in any way. We provide the image to the public as well as the source code, should anybody want to use our build or make their own, but we don't distribute keys.`
 
 ###### How do you manage and protect the keys used in your SHIM?
-`The CA is stored on a DATASHUR PRO2 hardware encryption key. The signing key is stored an a Taglio C980 SmartCard. Both are located in a secure storage area.`
+`The CA is stored on a DATASHUR PRO2 hardware encryption key. The signing key is stored an a Taglio C980 SmartCard. Both are FIPS 140-2 Level 3. Both are located in a secure storage area.`
 
 ###### Do you use EV certificates as embedded certificates in the SHIM?
 `No`
@@ -66,11 +66,6 @@ shimx64.efi,1,Leidos,shim,15.4,donald.cupp@leidos.com
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md  
 grub,1,Free Software Foundation,grub,2.06-rc1,https//www.gnu.org/software/grub/  
 grub.leidos,1,Leidos,grub,2.06-rc1-1,donald.cupp@leidos.com  
-`
-`Linux looks like  
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md  
-linux,1,The Linux Foundation,linux,5.4.108,https://www.kernel.org/  
-vmlinuz,1,Leidos,linux,5.4.108,donald.cupp@leidos.com  
 `
 
 ##### Were your old SHIM hashes provided to Microsoft ?
