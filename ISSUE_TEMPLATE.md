@@ -23,9 +23,9 @@ Make sure you have provided the following information:
 ###### What product or service is this for:
 `TENS Public`
 
-###### Please create your shim binaries starting with the 15.3 shim release tar file:
-###### https://github.com/rhboot/shim/releases/download/15.3/shim-15.3.tar.bz2
-###### This matches https://github.com/rhboot/shim/releases/tag/15.3 and contains
+###### Please create your shim binaries starting with the 15.4 shim release tar file:
+###### https://github.com/rhboot/shim/releases/download/15.4/shim-15.4.tar.bz2
+###### This matches https://github.com/rhboot/shim/releases/tag/15.4 and contains
 ###### the appropriate gnu-efi source.
 ###### Please confirm this as the origin your shim.
 `https://github.com/rhboot/shim/releases/download/15.4/shim-15.4.tar.bz2` 15.4
@@ -57,16 +57,16 @@ Make sure you have provided the following information:
 ###### "Please specifically confirm that you add a vendor specific SBAT entry for SBAT header in each binary that supports SBAT metadata
 ###### ( grub2, fwupd, fwupdate, shim + all child shim binaries )" to shim review doc ?
 ###### Please provide exact SBAT entries for all SBAT binaries you are booting or planning to boot directly through shim
-`Shim looks like  
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md  
-shim,1,UEFI shim,shim,1,https://github.com/rhboot/shim  
-shimx64.efi,1,Leidos,shim,15.4,donald.cupp@leidos.com  
-`
-`Grub looks like  
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md  
-grub,1,Free Software Foundation,grub,2.06-rc1,https//www.gnu.org/software/grub/  
-grub.leidos,1,Leidos,grub,2.06-rc1-1,donald.cupp@leidos.com  
-`
+`Shim looks like`  
+`sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md`  
+`shim,1,UEFI shim,shim,1,https://github.com/rhboot/shim`  
+`shimx64.efi,1,Leidos,shim,15.4,donald.cupp@leidos.com`  
+
+`Grub looks like`  
+`sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md`  
+`grub,1,Free Software Foundation,grub,2.06-rc1,https//www.gnu.org/software/grub/`  
+`grub.leidos,1,Leidos,grub,2.06-rc1-1,donald.cupp@leidos.com`  
+
 
 ##### Were your old SHIM hashes provided to Microsoft ?
 `N/A New Vendor`
@@ -106,7 +106,7 @@ grub.leidos,1,Leidos,grub,2.06-rc1-1,donald.cupp@leidos.com
 `No`
 
 ###### What kernel are you using? Which patches does it includes to enforce Secure Boot?
-`5.4.108, all secureboot patches should be applied`
+`5.10.28, all secureboot patches should be applied`
 
 ###### What changes were made since your SHIM was last signed?
 `N/A`
