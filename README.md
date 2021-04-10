@@ -102,13 +102,8 @@ N/A
 What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as close as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
 If possible, provide a Dockerfile that rebuilds the shim.
 -------------------------------------------------------------------------------
-ThinStation, you need at least git and chroot, gitea/gitea appears to be enough of a docker image.
-git clone --depth 1 https://github.com/Thinstation/thinstation.git  
-cd thinstation  
-./setup-chroot -i  
-wget https://leidos.com/interactives/Secureboot/Leidos-UEFI-CA.cer -O ts/ports/components/shim/UEFI-CA.cer  
-echo -e "shimx64.efi,1,Leidos,shim,15.4,donald.cupp@leidos.com\n" > ts/ports/components/shim/BOOTX64.csv  
-./setup-chroot -e prt-get update -fr shim -im -if -is |tee shim-build.log  
+
+https://www.github.com/doncuppjr/shim-review/Dockerfile
 
 gcc, 10.2.0, https://github.com/Thinstation/thinstation/tree/6.2-Stable/ts/ports/core/gcc  
 binutils, 2.32, https://github.com/Thinstation/thinstation/tree/6.2-Stable/ts/ports/core/binutils  
