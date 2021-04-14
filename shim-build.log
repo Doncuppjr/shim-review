@@ -15,7 +15,7 @@ bsdtar -p -o -C /ts/ports/components/shim/work/src -xf /ts/ports/components/shim
 + DEFAULT_LOADER=grubx64.efi
 + make
 sed	-e "s,@@VERSION@@,15.4," \
-	-e "s,@@UNAME@@,Linux x86_64 Intel(R) Core(TM) i7-7820X CPU @ 3.60GHz GenuineIntel GNU/Linux," \
+	-e "s,@@UNAME@@,buildhost," \
 	-e "s,@@COMMIT@@,20e4d9486fcae54ee44d2323ae342ffe68c920e6," \
 	< /ts/ports/components/shim/work/src/shim-15.4/version.c.in > version.c
 gcc -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/ts/ports/components/shim/work/src/shim-15.4/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/ts/ports/components/shim/work/src/shim-15.4/Cryptlib -I/ts/ports/components/shim/work/src/shim-15.4/Cryptlib/Include -I/ts/ports/components/shim/work/src/shim-15.4/gnu-efi/inc -I/ts/ports/components/shim/work/src/shim-15.4/gnu-efi/inc/x86_64 -I/ts/ports/components/shim/work/src/shim-15.4/gnu-efi/inc/protocol -I/ts/ports/components/shim/work/src/shim-15.4/include -iquote /ts/ports/components/shim/work/src/shim-15.4 -iquote /ts/ports/components/shim/work/src/shim-15.4 -isystem /ts/ports/components/shim/work/src/shim-15.4/include/system -isystem /usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -DDEFAULT_LOADER='L"grubx64.efi"' -DDEFAULT_LOADER_CHAR='"grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.4/"' -DVENDOR_CERT_FILE=\"/ts/ports/components/shim/work/src/UEFI-CA.cer\"   -c -o shim.o shim.c
@@ -590,7 +590,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=shimx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 0.00011081 s, 36.1 kB/s
+4 bytes copied, 7.0533e-05 s, 56.7 kB/s
 objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame -j .sbat \
@@ -627,7 +627,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=mmx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 8.2237e-05 s, 48.6 kB/s
+4 bytes copied, 7.8649e-05 s, 50.9 kB/s
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame \
@@ -637,47 +637,15 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=fbx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 7.6577e-05 s, 52.2 kB/s
+4 bytes copied, 9.7946e-05 s, 40.8 kB/s
 + for efi in mmx64.efi fbx64.efi
 + efisign mmx64.efi 'UEFI Signing'
-+ seed_label='UEFI Signing'
-++ pkcs11-tool -T
-++ grep -e 'UEFI Signing'
-++ cut -d : -f2
-++ cut -c2-
-+ full_label='ThinStation UEFI Signing Cert...'
-+ '[' -z 'ThinStation UEFI Signing Cert...' ']'
-++ echo 'ThinStation UEFI Signing Cert...'
-++ sed -e 's/ /%20/g'
-+ uri_label=ThinStation%20UEFI%20Signing%20Cert...
-+ pkcs11-tool -r -d 01 --type cert --token-label 'ThinStation UEFI Signing Cert...' --output-file /tmp/cert.der
-+ openssl x509 -in /tmp/cert.der -inform DER -out /tmp/cert.pem
-+ '[' -n ']'
-+ PIN=';pin-value='
-+ sbsign --engine pkcs11 --key 'pkcs11:manufacturer=piv_II;id=%01;token=ThinStation%20UEFI%20Signing%20Cert...;pin-value=' --cert /tmp/cert.pem --output mmx64.efi mmx64.efi
-warning: data remaining[728064 vs 845607]: gaps between PE/COFF sections?
-warning: data remaining[728064 vs 845608]: gaps between PE/COFF sections?
-Signing Unsigned original image
+/ts/bin/efisign: line 3: pkcs11-tool: command not found
+No smartcard certificate available. Exiting
 + for efi in mmx64.efi fbx64.efi
 + efisign fbx64.efi 'UEFI Signing'
-+ seed_label='UEFI Signing'
-++ pkcs11-tool -T
-++ grep -e 'UEFI Signing'
-++ cut -d : -f2
-++ cut -c2-
-+ full_label='ThinStation UEFI Signing Cert...'
-+ '[' -z 'ThinStation UEFI Signing Cert...' ']'
-++ echo 'ThinStation UEFI Signing Cert...'
-++ sed -e 's/ /%20/g'
-+ uri_label=ThinStation%20UEFI%20Signing%20Cert...
-+ pkcs11-tool -r -d 01 --type cert --token-label 'ThinStation UEFI Signing Cert...' --output-file /tmp/cert.der
-+ openssl x509 -in /tmp/cert.der -inform DER -out /tmp/cert.pem
-+ '[' -n ']'
-+ PIN=';pin-value='
-+ sbsign --engine pkcs11 --key 'pkcs11:manufacturer=piv_II;id=%01;token=ThinStation%20UEFI%20Signing%20Cert...;pin-value=' --cert /tmp/cert.pem --output fbx64.efi fbx64.efi
-warning: data remaining[71168 vs 84773]: gaps between PE/COFF sections?
-warning: data remaining[71168 vs 84776]: gaps between PE/COFF sections?
-Signing Unsigned original image
+/ts/bin/efisign: line 3: pkcs11-tool: command not found
+No smartcard certificate available. Exiting
 + make EFIDIR=ThinStation DESTDIR=/ts/ports/components/shim/work/pkg install
 gcc -I/usr/include -Og -g3 -Wall -Werror -Wextra -o buildid /ts/ports/components/shim/work/src/shim-15.4/buildid.c -lelf
 Making BOOTX64.CSV
@@ -708,40 +676,37 @@ install -m 0644 fbx64.efi /ts/ports/components/shim/work/pkg//usr/share//shim/15
 + install -D -m644 COPYRIGHT /ts/ports/components/shim/work/pkg/usr/share/licenses/shim/LICENSE
 + rm -rf /ts/ports/components/shim/work/pkg/usr/src /ts/ports/components/shim/work/pkg/usr/lib/debug
 + sha256sum /ts/ports/components/shim/work/pkg/usr/share/shim/15.4/x64/shimx64.efi
-ba0fe814dc482a4cca9f2c3f70e73efef674456d68d416d371130b30dcb067f8  /ts/ports/components/shim/work/pkg/usr/share/shim/15.4/x64/shimx64.efi
+fc3febdd460d158710b47165e658f746811b3cce54dbd197d2d13de44f2079d6  /ts/ports/components/shim/work/pkg/usr/share/shim/15.4/x64/shimx64.efi
 =======> Build result:
-drwxr-xr-x  0 root   root        0 Mar 30 21:10 boot/
-drwx------  0 root   root        0 Mar 30 21:10 boot/efi/
-drwxr-xr-x  0 root   root        0 Mar 30 21:10 boot/efi/EFI/
-drwxr-xr-x  0 root   root        0 Mar 30 21:10 boot/efi/EFI/BOOT/
-drwxr-xr-x  0 root   root        0 Mar 30 21:10 boot/efi/EFI/ThinStation/
--rw-r--r--  0 root   root   918028 Mar 30 21:10 boot/efi/EFI/ThinStation/shimx64.efi
--rw-r--r--  0 root   root      128 Mar 30 21:10 boot/efi/EFI/ThinStation/BOOTX64.CSV
--rw-r--r--  0 root   root   847504 Mar 30 21:10 boot/efi/EFI/ThinStation/mmx64.efi
--rw-r--r--  0 root   root   918028 Mar 30 21:10 boot/efi/EFI/BOOT/BOOTX64.EFI
--rw-r--r--  0 root   root    86672 Mar 30 21:10 boot/efi/EFI/BOOT/fbx64.efi
--rw-r--r--  0 root   root   847504 Mar 30 21:10 boot/efi/EFI/BOOT/mmx64.efi
-drwxr-xr-x  0 root   root        0 Mar 30 21:10 usr/
-drwxr-xr-x  0 root   root        0 Mar 30 21:10 usr/lib/
-drwxr-xr-x  0 root   root        0 Mar 30 21:10 usr/share/
-drwxr-xr-x  0 root   root        0 Mar 30 21:10 usr/share/shim/
-drwxr-xr-x  0 root   root        0 Mar 30 21:10 usr/share/licenses/
-drwxr-xr-x  0 root   root        0 Mar 30 21:10 usr/share/licenses/shim/
--rw-r--r--  0 root   root     1411 Mar 30 21:10 usr/share/licenses/shim/LICENSE
-drwxr-xr-x  0 root   root        0 Mar 30 21:10 usr/share/shim/15.4/
-drwxr-xr-x  0 root   root        0 Mar 30 21:10 usr/share/shim/15.4/x64/
--rw-r--r--  0 root   root   918028 Mar 30 21:10 usr/share/shim/15.4/x64/shimx64.efi
--rw-r--r--  0 root   root      128 Mar 30 21:10 usr/share/shim/15.4/x64/BOOTX64.CSV
--rw-r--r--  0 root   root   847504 Mar 30 21:10 usr/share/shim/15.4/x64/mmx64.efi
--rw-r--r--  0 root   root    86672 Mar 30 21:10 usr/share/shim/15.4/x64/fbx64.efi
+drwxr-xr-x  0 root   root        0 Apr 14 18:45 boot/
+drwx------  0 root   root        0 Apr 14 18:45 boot/efi/
+drwxr-xr-x  0 root   root        0 Apr 14 18:45 boot/efi/EFI/
+drwxr-xr-x  0 root   root        0 Apr 14 18:45 boot/efi/EFI/BOOT/
+drwxr-xr-x  0 root   root        0 Apr 14 18:45 boot/efi/EFI/ThinStation/
+-rw-r--r--  0 root   root   918028 Apr 14 18:45 boot/efi/EFI/ThinStation/shimx64.efi
+-rw-r--r--  0 root   root      128 Apr 14 18:45 boot/efi/EFI/ThinStation/BOOTX64.CSV
+-rw-r--r--  0 root   root   845607 Apr 14 18:45 boot/efi/EFI/ThinStation/mmx64.efi
+-rw-r--r--  0 root   root   918028 Apr 14 18:45 boot/efi/EFI/BOOT/BOOTX64.EFI
+-rw-r--r--  0 root   root    84773 Apr 14 18:45 boot/efi/EFI/BOOT/fbx64.efi
+-rw-r--r--  0 root   root   845607 Apr 14 18:45 boot/efi/EFI/BOOT/mmx64.efi
+drwxr-xr-x  0 root   root        0 Apr 14 18:45 usr/
+drwxr-xr-x  0 root   root        0 Apr 14 18:45 usr/lib/
+drwxr-xr-x  0 root   root        0 Apr 14 18:45 usr/share/
+drwxr-xr-x  0 root   root        0 Apr 14 18:45 usr/share/shim/
+drwxr-xr-x  0 root   root        0 Apr 14 18:45 usr/share/licenses/
+drwxr-xr-x  0 root   root        0 Apr 14 18:45 usr/share/licenses/shim/
+-rw-r--r--  0 root   root     1411 Apr 14 18:45 usr/share/licenses/shim/LICENSE
+drwxr-xr-x  0 root   root        0 Apr 14 18:45 usr/share/shim/15.4/
+drwxr-xr-x  0 root   root        0 Apr 14 18:45 usr/share/shim/15.4/x64/
+-rw-r--r--  0 root   root   918028 Apr 14 18:45 usr/share/shim/15.4/x64/shimx64.efi
+-rw-r--r--  0 root   root      128 Apr 14 18:45 usr/share/shim/15.4/x64/BOOTX64.CSV
+-rw-r--r--  0 root   root   845607 Apr 14 18:45 usr/share/shim/15.4/x64/mmx64.efi
+-rw-r--r--  0 root   root    84773 Apr 14 18:45 usr/share/shim/15.4/x64/fbx64.efi
 =======> WARNING: Footprint ignored.
 =======> Building '/ts/ports/components/shim/shim#15.4-3.pkg.tar.xz' succeeded.
-prt-get: updating shim from 15.3-3 to 15.4-3
+prt-get: reinstalling shim 15.4-3
 
 -- Packages updated
 shim
 
 prt-get: updated successfully
-
-Goodbye. 
-

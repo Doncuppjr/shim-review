@@ -1,7 +1,7 @@
 Make sure you have provided the following information:
 
  - [x] link to your code branch cloned from rhboot/shim-review in the form user/repo@tag
-`https://www.github.com/doncuppjr/shim-review@20210408`
+`https://github.com/Doncuppjr/shim-review/tree/Leidos-shim-x64-20210414`
  - [x] completed README.md file with the necessary information
 `https://raw.githubusercontent.com/Doncuppjr/shim-review/master/README.md`
  - [x] shim.efi to be signed
@@ -60,7 +60,7 @@ Make sure you have provided the following information:
 `Shim looks like`  
 `sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md`  
 `shim,1,UEFI shim,shim,1,https://github.com/rhboot/shim`  
-`shimx64.efi,1,Leidos,shim,15.4,donald.cupp@leidos.com`  
+`shim.leidos,1,Leidos,shim,15.4,donald.cupp@leidos.com`  
 
 `Grub looks like`  
 `sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md`  
@@ -112,5 +112,4 @@ Make sure you have provided the following information:
 `N/A`
 
 ###### What is the SHA256 hash of your final SHIM binary?
-`ba0fe814dc482a4cca9f2c3f70e73efef674456d68d416d371130b30dcb067f8`
-
+`fc3febdd460d158710b47165e658f746811b3cce54dbd197d2d13de44f2079d6`
