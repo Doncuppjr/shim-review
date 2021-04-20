@@ -1,7 +1,7 @@
 Make sure you have provided the following information:
 
  - [x] link to your code branch cloned from rhboot/shim-review in the form user/repo@tag
-`https://github.com/Doncuppjr/shim-review/tree/Leidos-shim-x64-20210414`
+`https://github.com/Doncuppjr/shim-review/tree/Leidos-shim-x64-20210419`
  - [x] completed README.md file with the necessary information
 `https://raw.githubusercontent.com/Doncuppjr/shim-review/master/README.md`
  - [x] shim.efi to be signed
@@ -16,6 +16,8 @@ Make sure you have provided the following information:
 `https://github.com/Thinstation/thinstation/tree/6.2-Stable/ts/ports/opt/grub2-efi`
  - [x] build logs
 `https://raw.githubusercontent.com/Doncuppjr/shim-review/master/shim-build.log`
+ - [x] a Dockerfile to reproduce the build of the provided shim EFI binaries
+`https://raw.githubusercontent.com/Doncuppjr/shim-review/master/Dockerfile`
 
 ###### What organization or people are asking to have this signed:
 `Leidos, Inc.`
@@ -112,4 +114,5 @@ Make sure you have provided the following information:
 `N/A`
 
 ###### What is the SHA256 hash of your final SHIM binary?
-`fc3febdd460d158710b47165e658f746811b3cce54dbd197d2d13de44f2079d6`
+`b72831848b9eaf562f1847ca37a6d0082069a1d912968bf3fb3ac16ea5e27d7b`
+`Submission ID 13644613002097129`

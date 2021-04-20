@@ -100,7 +100,7 @@ N/A
 
 -------------------------------------------------------------------------------
 What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as close as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
-If possible, provide a Dockerfile that rebuilds the shim.
+If the shim binaries can't be reproduced using the provided Dockerfile, please explain why that's the case and the differences would be.
 -------------------------------------------------------------------------------
 
 https://www.github.com/doncuppjr/shim-review/Dockerfile
@@ -117,5 +117,7 @@ shim-build.log
 -------------------------------------------------------------------------------
 Add any additional information you think we may need to validate this shim
 -------------------------------------------------------------------------------
-Can't think of anything.
-
+The ThinStation image building system was designed back in the days of chroot containers.  
+It places an emphasis on making it easy for realatively inexperienced techs to make very sercure  
+Thinclients. It really simplifies a lot of the structures most distros use into a single git  
+checkout. Most of the time that works for us, but docker don't like it much, but I made it work.
