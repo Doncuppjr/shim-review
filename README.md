@@ -120,4 +120,4 @@ Add any additional information you think we may need to validate this shim
 The ThinStation image building system was designed back in the days of chroot containers.  
 It places an emphasis on making it easy for realatively inexperienced techs to make very sercure  
 Thinclients. It really simplifies a lot of the structures most distros use into a single git  
-checkout. Most of the time that works for us, but docker don't like it much, but I made it work.
+checkout. Most of the time that works for us, but docker doesn't like it much, but I made it work.

@@ -1,68 +1,98 @@
 prt-get: updating /ts/ports/components/shim
 =======> Downloading 'https://github.com/rhboot/shim/releases/download/15.4/shim-15.4.tar.bz2'.
---2021-04-20 01:45:32--  https://github.com/rhboot/shim/releases/download/15.4/shim-15.4.tar.bz2
-Resolving github.com... 192.30.255.113
-Connecting to github.com|192.30.255.113|:443... connected.
+--2021-04-22 15:16:18--  https://github.com/rhboot/shim/releases/download/15.4/shim-15.4.tar.bz2
+Resolving github.com... 192.30.255.112
+Connecting to github.com|192.30.255.112|:443... connected.
 HTTP request sent, awaiting response... 302 Found
-Location: https://github-releases.githubusercontent.com/3996476/6dda6900-917a-11eb-956e-a746627a51ec?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210420%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210420T014532Z&X-Amz-Expires=300&X-Amz-Signature=1b87eab2412892ec7189063955567422a256d06c76cf20726b9c37f6c2596b21&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=3996476&response-content-disposition=attachment%3B%20filename%3Dshim-15.4.tar.bz2&response-content-type=application%2Foctet-stream [following]
---2021-04-20 01:45:32--  https://github-releases.githubusercontent.com/3996476/6dda6900-917a-11eb-956e-a746627a51ec?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210420%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210420T014532Z&X-Amz-Expires=300&X-Amz-Signature=1b87eab2412892ec7189063955567422a256d06c76cf20726b9c37f6c2596b21&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=3996476&response-content-disposition=attachment%3B%20filename%3Dshim-15.4.tar.bz2&response-content-type=application%2Foctet-stream
+Location: https://github-releases.githubusercontent.com/3996476/6dda6900-917a-11eb-956e-a746627a51ec?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210422%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210422T151618Z&X-Amz-Expires=300&X-Amz-Signature=98d3f5360df40f026cfb215afe9d698125971a8069f55579c817babe4bfb6593&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=3996476&response-content-disposition=attachment%3B%20filename%3Dshim-15.4.tar.bz2&response-content-type=application%2Foctet-stream [following]
+--2021-04-22 15:16:18--  https://github-releases.githubusercontent.com/3996476/6dda6900-917a-11eb-956e-a746627a51ec?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210422%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210422T151618Z&X-Amz-Expires=300&X-Amz-Signature=98d3f5360df40f026cfb215afe9d698125971a8069f55579c817babe4bfb6593&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=3996476&response-content-disposition=attachment%3B%20filename%3Dshim-15.4.tar.bz2&response-content-type=application%2Foctet-stream
 Resolving github-releases.githubusercontent.com... 185.199.109.154, 185.199.110.154, 185.199.111.154, ...
 Connecting to github-releases.githubusercontent.com|185.199.109.154|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 1260475 (1.2M) [application/octet-stream]
 Saving to: '/ts/ports/components/shim/shim-15.4.tar.bz2.partial'
 
-     0K .......... .......... .......... .......... ..........  4% 8.49M 0s
-    50K .......... .......... .......... .......... ..........  8% 12.0M 0s
-   100K .......... .......... .......... .......... .......... 12% 11.1M 0s
-   150K .......... .......... .......... .......... .......... 16% 14.1M 0s
-   200K .......... .......... .......... .......... .......... 20% 13.2M 0s
-   250K .......... .......... .......... .......... .......... 24% 18.5M 0s
-   300K .......... .......... .......... .......... .......... 28% 13.3M 0s
-   350K .......... .......... .......... .......... .......... 32% 11.8M 0s
-   400K .......... .......... .......... .......... .......... 36% 21.4M 0s
-   450K .......... .......... .......... .......... .......... 40% 2.20M 0s
-   500K .......... .......... .......... .......... .......... 44% 15.3M 0s
-   550K .......... .......... .......... .......... .......... 48% 13.9M 0s
-   600K .......... .......... .......... .......... .......... 52% 17.9M 0s
-   650K .......... .......... .......... .......... .......... 56% 11.4M 0s
-   700K .......... .......... .......... .......... .......... 60% 15.1M 0s
-   750K .......... .......... .......... .......... .......... 64% 25.3M 0s
-   800K .......... .......... .......... .......... .......... 69% 12.1M 0s
-   850K .......... .......... .......... .......... .......... 73% 14.8M 0s
-   900K .......... .......... .......... .......... .......... 77% 11.8M 0s
-   950K .......... .......... .......... .......... .......... 81% 22.5M 0s
-  1000K .......... .......... .......... .......... .......... 85% 14.8M 0s
-  1050K .......... .......... .......... .......... .......... 89% 13.7M 0s
-  1100K .......... .......... .......... .......... .......... 93% 13.9M 0s
-  1150K .......... .......... .......... .......... .......... 97% 18.7M 0s
-  1200K .......... .......... ..........                      100% 4.50M=0.1s
+     0K .......... .......... .......... .......... ..........  4% 9.06M 0s
+    50K .......... .......... .......... .......... ..........  8% 8.09M 0s
+   100K .......... .......... .......... .......... .......... 12% 4.67M 0s
+   150K .......... .......... .......... .......... .......... 16% 18.2M 0s
+   200K .......... .......... .......... .......... .......... 20% 6.63M 0s
+   250K .......... .......... .......... .......... .......... 24% 8.85M 0s
+   300K .......... .......... .......... .......... .......... 28% 7.65M 0s
+   350K .......... .......... .......... .......... .......... 32% 3.67M 0s
+   400K .......... .......... .......... .......... .......... 36% 8.50M 0s
+   450K .......... .......... .......... .......... .......... 40% 8.98M 0s
+   500K .......... .......... .......... .......... .......... 44% 7.16M 0s
+   550K .......... .......... .......... .......... .......... 48% 3.37M 0s
+   600K .......... .......... .......... .......... .......... 52% 28.5M 0s
+   650K .......... .......... .......... .......... .......... 56% 9.00M 0s
+   700K .......... .......... .......... .......... .......... 60% 14.4M 0s
+   750K .......... .......... .......... .......... .......... 64% 4.88M 0s
+   800K .......... .......... .......... .......... .......... 69% 8.07M 0s
+   850K .......... .......... .......... .......... .......... 73% 11.1M 0s
+   900K .......... .......... .......... .......... .......... 77% 7.26M 0s
+   950K .......... .......... .......... .......... .......... 81% 8.37M 0s
+  1000K .......... .......... .......... .......... .......... 85% 3.58M 0s
+  1050K .......... .......... .......... .......... .......... 89% 7.43M 0s
+  1100K .......... .......... .......... .......... .......... 93% 5.80M 0s
+  1150K .......... .......... .......... .......... .......... 97% 62.7M 0s
+  1200K .......... .......... ..........                      100% 7.12M=0.2s
 
-2021-04-20 01:45:33 (11.1 MB/s) - '/ts/ports/components/shim/shim-15.4.tar.bz2.partial' saved [1260475/1260475]
+2021-04-22 15:16:18 (7.21 MB/s) - '/ts/ports/components/shim/shim-15.4.tar.bz2.partial' saved [1260475/1260475]
 
 =======> Downloading 'https://github.com/rhboot/shim/commit/4068fd42c891ea6ebdec056f461babc6e4048844.patch'.
---2021-04-20 01:45:33--  https://github.com/rhboot/shim/commit/4068fd42c891ea6ebdec056f461babc6e4048844.patch
-Resolving github.com... 192.30.255.113
-Connecting to github.com|192.30.255.113|:443... connected.
+--2021-04-22 15:16:18--  https://github.com/rhboot/shim/commit/4068fd42c891ea6ebdec056f461babc6e4048844.patch
+Resolving github.com... 192.30.255.112
+Connecting to github.com|192.30.255.112|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 1376 (1.3K) [text/plain]
 Saving to: '/ts/ports/components/shim/4068fd42c891ea6ebdec056f461babc6e4048844.patch.partial'
 
-     0K .                                                     100% 12.1M=0s
+     0K .                                                     100% 25.3M=0s
 
-2021-04-20 01:45:33 (12.1 MB/s) - '/ts/ports/components/shim/4068fd42c891ea6ebdec056f461babc6e4048844.patch.partial' saved [1376/1376]
+2021-04-22 15:16:19 (25.3 MB/s) - '/ts/ports/components/shim/4068fd42c891ea6ebdec056f461babc6e4048844.patch.partial' saved [1376/1376]
+
+=======> Downloading 'https://github.com/rhboot/shim/commit/822d07ad4f07ef66fe447a130e1027c88d02a394.patch'.
+--2021-04-22 15:16:19--  https://github.com/rhboot/shim/commit/822d07ad4f07ef66fe447a130e1027c88d02a394.patch
+Resolving github.com... 192.30.255.112
+Connecting to github.com|192.30.255.112|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1391 (1.4K) [text/plain]
+Saving to: '/ts/ports/components/shim/822d07ad4f07ef66fe447a130e1027c88d02a394.patch.partial'
+
+     0K .                                                     100% 7.19M=0s
+
+2021-04-22 15:16:19 (7.19 MB/s) - '/ts/ports/components/shim/822d07ad4f07ef66fe447a130e1027c88d02a394.patch.partial' saved [1391/1391]
+
+=======> Downloading 'https://github.com/rhboot/shim/commit/8b59591775a0412863aab9596ab87bdd493a9c1e.patch'.
+--2021-04-22 15:16:19--  https://github.com/rhboot/shim/commit/8b59591775a0412863aab9596ab87bdd493a9c1e.patch
+Resolving github.com... 192.30.255.112
+Connecting to github.com|192.30.255.112|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2102 (2.1K) [text/plain]
+Saving to: '/ts/ports/components/shim/8b59591775a0412863aab9596ab87bdd493a9c1e.patch.partial'
+
+     0K ..                                                    100% 9.42M=0s
+
+2021-04-22 15:16:19 (9.42 MB/s) - '/ts/ports/components/shim/8b59591775a0412863aab9596ab87bdd493a9c1e.patch.partial' saved [2102/2102]
 
 =======> Building '/ts/ports/components/shim/shim#15.4-3.pkg.tar.xz'.
 cp UEFI-CA.cer /ts/ports/components/shim/work/src
 cp BOOTX64.csv /ts/ports/components/shim/work/src
 bsdtar -p -o -C /ts/ports/components/shim/work/src -xf /ts/ports/components/shim/shim-15.4.tar.bz2
 cp /ts/ports/components/shim/4068fd42c891ea6ebdec056f461babc6e4048844.patch /ts/ports/components/shim/work/src
+cp /ts/ports/components/shim/822d07ad4f07ef66fe447a130e1027c88d02a394.patch /ts/ports/components/shim/work/src
+cp /ts/ports/components/shim/8b59591775a0412863aab9596ab87bdd493a9c1e.patch /ts/ports/components/shim/work/src
 + build
 + unset CFLAGS CXXFLAGS
 + cd shim-15.4
 + patch -p1 -i /ts/ports/components/shim/work/src/4068fd42c891ea6ebdec056f461babc6e4048844.patch
 patching file mok.c
 Hunk #1 succeeded at 1002 (offset 3 lines).
++ patch -p1 -i /ts/ports/components/shim/work/src/822d07ad4f07ef66fe447a130e1027c88d02a394.patch
+patching file mok.c
++ patch -p1 -i /ts/ports/components/shim/work/src/8b59591775a0412863aab9596ab87bdd493a9c1e.patch
+patching file mok.c
 + cat /ts/ports/components/shim/work/src/BOOTX64.csv
 + export VENDOR_CERT_FILE=/ts/ports/components/shim/work/src/UEFI-CA.cer
 + VENDOR_CERT_FILE=/ts/ports/components/shim/work/src/UEFI-CA.cer
@@ -649,7 +679,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=shimx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 0.000333151 s, 12.0 kB/s
+4 bytes copied, 0.000342612 s, 11.7 kB/s
 objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame -j .sbat \
@@ -686,7 +716,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=mmx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 6.6975e-05 s, 59.7 kB/s
+4 bytes copied, 0.000108112 s, 37.0 kB/s
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame \
@@ -696,7 +726,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=fbx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 5.7851e-05 s, 69.1 kB/s
+4 bytes copied, 7.7825e-05 s, 51.4 kB/s
 + for efi in mmx64.efi fbx64.efi
 + efisign mmx64.efi 'UEFI Signing'
 No slots.
@@ -720,7 +750,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=shimx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 6.8898e-05 s, 58.1 kB/s
+4 bytes copied, 8.6346e-05 s, 46.3 kB/s
 objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame -j .sbat \
@@ -753,7 +783,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=mmx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 6.8755e-05 s, 58.2 kB/s
+4 bytes copied, 0.000102057 s, 39.2 kB/s
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame \
@@ -763,7 +793,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=fbx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 5.5263e-05 s, 72.4 kB/s
+4 bytes copied, 7.7211e-05 s, 51.8 kB/s
 gcc -I/usr/include -Og -g3 -Wall -Werror -Wextra -o buildid /ts/ports/components/shim/work/src/shim-15.4/buildid.c -lelf
 Making BOOTX64.CSV
 install -d -m 0755 /ts/ports/components/shim/work/pkg/
@@ -799,7 +829,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=shimx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 9.0962e-05 s, 44.0 kB/s
+4 bytes copied, 0.000106202 s, 37.7 kB/s
 objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame -j .sbat \
@@ -832,7 +862,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=mmx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 9.5225e-05 s, 42.0 kB/s
+4 bytes copied, 8.414e-05 s, 47.5 kB/s
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame \
@@ -842,7 +872,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=fbx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 9.7824e-05 s, 40.9 kB/s
+4 bytes copied, 5.4228e-05 s, 73.8 kB/s
 install -d -m 0755 /ts/ports/components/shim/work/pkg//usr/share//shim/15.4/x64/
 install -m 0644 shimx64.efi /ts/ports/components/shim/work/pkg//usr/share//shim/15.4/x64//
 install -m 0644 BOOTX64.CSV /ts/ports/components/shim/work/pkg//usr/share//shim/15.4/x64//
@@ -851,32 +881,32 @@ install -m 0644 fbx64.efi /ts/ports/components/shim/work/pkg//usr/share//shim/15
 + install -D -m644 COPYRIGHT /ts/ports/components/shim/work/pkg/usr/share/licenses/shim/LICENSE
 + rm -rf /ts/ports/components/shim/work/pkg/usr/src /ts/ports/components/shim/work/pkg/usr/lib/debug
 + sha256sum /ts/ports/components/shim/work/pkg/usr/share/shim/15.4/x64/shimx64.efi
-b72831848b9eaf562f1847ca37a6d0082069a1d912968bf3fb3ac16ea5e27d7b  /ts/ports/components/shim/work/pkg/usr/share/shim/15.4/x64/shimx64.efi
+ab2fd40d3238ac1e0c29d74ca0a423a586cb43e214f0f4059d6236e2c3c69787  /ts/ports/components/shim/work/pkg/usr/share/shim/15.4/x64/shimx64.efi
 =======> Build result:
-drwxr-xr-x  0 root   root        0 Apr 20 01:45 boot/
-drwx------  0 root   root        0 Apr 20 01:45 boot/efi/
-drwxr-xr-x  0 root   root        0 Apr 20 01:45 boot/efi/EFI/
-drwxr-xr-x  0 root   root        0 Apr 20 01:45 boot/efi/EFI/BOOT/
-drwxr-xr-x  0 root   root        0 Apr 20 01:45 boot/efi/EFI/ThinStation/
--rw-r--r--  0 root   root   918028 Apr 20 01:45 boot/efi/EFI/ThinStation/shimx64.efi
--rw-r--r--  0 root   root      128 Apr 20 01:45 boot/efi/EFI/ThinStation/BOOTX64.CSV
--rw-r--r--  0 root   root   845607 Apr 20 01:45 boot/efi/EFI/ThinStation/mmx64.efi
--rw-r--r--  0 root   root   918028 Apr 20 01:45 boot/efi/EFI/BOOT/BOOTX64.EFI
--rw-r--r--  0 root   root    84773 Apr 20 01:45 boot/efi/EFI/BOOT/fbx64.efi
--rw-r--r--  0 root   root   845607 Apr 20 01:45 boot/efi/EFI/BOOT/mmx64.efi
-drwxr-xr-x  0 root   root        0 Apr 20 01:45 usr/
-drwxr-xr-x  0 root   root        0 Apr 20 01:45 usr/lib/
-drwxr-xr-x  0 root   root        0 Apr 20 01:45 usr/share/
-drwxr-xr-x  0 root   root        0 Apr 20 01:45 usr/share/shim/
-drwxr-xr-x  0 root   root        0 Apr 20 01:45 usr/share/licenses/
-drwxr-xr-x  0 root   root        0 Apr 20 01:45 usr/share/licenses/shim/
--rw-r--r--  0 root   root     1411 Apr 20 01:45 usr/share/licenses/shim/LICENSE
-drwxr-xr-x  0 root   root        0 Apr 20 01:45 usr/share/shim/15.4/
-drwxr-xr-x  0 root   root        0 Apr 20 01:45 usr/share/shim/15.4/x64/
--rw-r--r--  0 root   root   918028 Apr 20 01:45 usr/share/shim/15.4/x64/shimx64.efi
--rw-r--r--  0 root   root      128 Apr 20 01:45 usr/share/shim/15.4/x64/BOOTX64.CSV
--rw-r--r--  0 root   root   845607 Apr 20 01:45 usr/share/shim/15.4/x64/mmx64.efi
--rw-r--r--  0 root   root    84773 Apr 20 01:45 usr/share/shim/15.4/x64/fbx64.efi
+drwxr-xr-x  0 root   root        0 Apr 22 15:16 boot/
+drwx------  0 root   root        0 Apr 22 15:16 boot/efi/
+drwxr-xr-x  0 root   root        0 Apr 22 15:16 boot/efi/EFI/
+drwxr-xr-x  0 root   root        0 Apr 22 15:16 boot/efi/EFI/BOOT/
+drwxr-xr-x  0 root   root        0 Apr 22 15:16 boot/efi/EFI/ThinStation/
+-rw-r--r--  0 root   root   918540 Apr 22 15:16 boot/efi/EFI/ThinStation/shimx64.efi
+-rw-r--r--  0 root   root      128 Apr 22 15:16 boot/efi/EFI/ThinStation/BOOTX64.CSV
+-rw-r--r--  0 root   root   845607 Apr 22 15:16 boot/efi/EFI/ThinStation/mmx64.efi
+-rw-r--r--  0 root   root   918540 Apr 22 15:16 boot/efi/EFI/BOOT/BOOTX64.EFI
+-rw-r--r--  0 root   root    84773 Apr 22 15:16 boot/efi/EFI/BOOT/fbx64.efi
+-rw-r--r--  0 root   root   845607 Apr 22 15:16 boot/efi/EFI/BOOT/mmx64.efi
+drwxr-xr-x  0 root   root        0 Apr 22 15:16 usr/
+drwxr-xr-x  0 root   root        0 Apr 22 15:16 usr/lib/
+drwxr-xr-x  0 root   root        0 Apr 22 15:16 usr/share/
+drwxr-xr-x  0 root   root        0 Apr 22 15:16 usr/share/shim/
+drwxr-xr-x  0 root   root        0 Apr 22 15:16 usr/share/licenses/
+drwxr-xr-x  0 root   root        0 Apr 22 15:16 usr/share/licenses/shim/
+-rw-r--r--  0 root   root     1411 Apr 22 15:16 usr/share/licenses/shim/LICENSE
+drwxr-xr-x  0 root   root        0 Apr 22 15:16 usr/share/shim/15.4/
+drwxr-xr-x  0 root   root        0 Apr 22 15:16 usr/share/shim/15.4/x64/
+-rw-r--r--  0 root   root   918540 Apr 22 15:16 usr/share/shim/15.4/x64/shimx64.efi
+-rw-r--r--  0 root   root      128 Apr 22 15:16 usr/share/shim/15.4/x64/BOOTX64.CSV
+-rw-r--r--  0 root   root   845607 Apr 22 15:16 usr/share/shim/15.4/x64/mmx64.efi
+-rw-r--r--  0 root   root    84773 Apr 22 15:16 usr/share/shim/15.4/x64/fbx64.efi
 =======> WARNING: Footprint ignored.
 =======> Building '/ts/ports/components/shim/shim#15.4-3.pkg.tar.xz' succeeded.
 prt-get: reinstalling shim 15.4-3
@@ -892,18 +922,18 @@ Goodbye.
 /usr/share/shim/15.4/x64/shimx64.efi:     file format pei-x86-64
 
 Contents of section .sbat:
- cc000 73626174 2c312c53 42415420 56657273  sbat,1,SBAT Vers
- cc010 696f6e2c 73626174 2c312c68 74747073  ion,sbat,1,https
- cc020 3a2f2f67 69746875 622e636f 6d2f7268  ://github.com/rh
- cc030 626f6f74 2f736869 6d2f626c 6f622f6d  boot/shim/blob/m
- cc040 61696e2f 53424154 2e6d640a 7368696d  ain/SBAT.md.shim
- cc050 2c312c55 45464920 7368696d 2c736869  ,1,UEFI shim,shi
- cc060 6d2c312c 68747470 733a2f2f 67697468  m,1,https://gith
- cc070 75622e63 6f6d2f72 68626f6f 742f7368  ub.com/rhboot/sh
- cc080 696d0a73 68696d2e 6c656964 6f732c31  im.shim.leidos,1
- cc090 2c4c6569 646f732c 7368696d 2c31352e  ,Leidos,shim,15.
- cc0a0 342c646f 6e616c64 2e637570 70406c65  4,donald.cupp@le
- cc0b0 69646f73 2e636f6d 0a0a               idos.com..      
+ cd000 73626174 2c312c53 42415420 56657273  sbat,1,SBAT Vers
+ cd010 696f6e2c 73626174 2c312c68 74747073  ion,sbat,1,https
+ cd020 3a2f2f67 69746875 622e636f 6d2f7268  ://github.com/rh
+ cd030 626f6f74 2f736869 6d2f626c 6f622f6d  boot/shim/blob/m
+ cd040 61696e2f 53424154 2e6d640a 7368696d  ain/SBAT.md.shim
+ cd050 2c312c55 45464920 7368696d 2c736869  ,1,UEFI shim,shi
+ cd060 6d2c312c 68747470 733a2f2f 67697468  m,1,https://gith
+ cd070 75622e63 6f6d2f72 68626f6f 742f7368  ub.com/rhboot/sh
+ cd080 696d0a73 68696d2e 6c656964 6f732c31  im.shim.leidos,1
+ cd090 2c4c6569 646f732c 7368696d 2c31352e  ,Leidos,shim,15.
+ cd0a0 342c646f 6e616c64 2e637570 70406c65  4,donald.cupp@le
+ cd0b0 69646f73 2e636f6d 0a0a               idos.com..      
 
 Goodbye. 
 
