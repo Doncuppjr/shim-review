@@ -61,7 +61,9 @@ https://github.com/Thinstation/thinstation/blob/6.2-Stable/ts/ports/components/s
 -------------------------------------------------------------------------------
 What patches are being applied and why:
 -------------------------------------------------------------------------------
-None
+PR361 allocate MOK config table as BootServicesData
+PR362 don't force authentication when database is not available.
+PR364 EFI 1.10 for older Macbooks.
 
 -------------------------------------------------------------------------------
 If bootloader, shim loading is, grub2: is CVE-2020-10713 fixed ?
